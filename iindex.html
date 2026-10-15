@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave Academy - Hard Work Has No Substitute</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        daveRed: '#dc2626',
+                        daveOrange: '#ea580c',
+                        daveDark: '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-header {
+            background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 50%, #c2410c 100%);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e1b4b 0%, #311030 50%, #450a0a 100%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .quote-box {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-amber-500 via-orange-600 to-red-600 text-white text-xs sm:text-sm font-semibold py-2 px-4 text-center shadow-inner">
+        <span>ॐ श्री गणेशाय नमः</span> &nbsp;|&nbsp; 
+        <span class="tracking-wide">"HARD WORK HAS NO SUBSTITUTE"</span>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo / Brand -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-red-600 to-orange-500 flex items-center justify-center text-white font-black text-2xl shadow-lg shadow-orange-500/30">
+                        D
+                    </div>
+                    <div>
+                        <a href="#" class="text-2xl font-black tracking-wider text-slate-900 flex items-center gap-1">
+                            DAVE <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">ACADEMY</span>
+                        </a>
+                        <p class="text-xs text-slate-500 font-medium">Excellence in Education</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-slate-700">
+                    <a href="#home" class="hover:text-red-600 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-red-600 transition-colors">About</a>
+                    <a href="#courses" class="hover:text-red-600 transition-colors">Courses</a>
+                    <a href="#features" class="hover:text-red-600 transition-colors">Why Us</a>
+                    <a href="#contact" class="hover:text-red-600 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Call to Action Button -->
+                <div class="hidden sm:flex items-center space-x-4">
+                    <a href="#inquiry" class="bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white font-bold px-6 py-2.5 rounded-full shadow-lg shadow-red-500/25 transition-all transform hover:scale-105">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> Join Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-red-600 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-700 font-medium hover:text-red-600">Home</a>
+            <a href="#about" class="block py-2 text-slate-700 font-medium hover:text-red-600">About</a>
+            <a href="#courses" class="block py-2 text-slate-700 font-medium hover:text-red-600">Courses</a>
+            <a href="#features" class="block py-2 text-slate-700 font-medium hover:text-red-600">Why Us</a>
+            <a href="#contact" class="block py-2 text-slate-700 font-medium hover:text-red-600">Contact</a>
+            <div class="pt-2">
+                <a href="#inquiry" class="block text-center bg-gradient-to-r from-red-600 to-orange-500 text-white font-bold py-3 rounded-xl shadow-md">
+                    Join Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white relative overflow-hidden py-20 lg:py-28">
+        <!-- Background Decorative Orbs -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-red-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-amber-300 font-semibold text-sm">
+                        <i class="fa-solid fa-graduation-cap"></i> GSEB & CBSE Special Coaching
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
+                        DAVE <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-amber-300">ACADEMY</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light">
+                        Empowering students for 8th, 9th, and 10th grades (English & Gujarati Medium) with concept-based learning and expert mentorship.
+                    </p>
+
+                    <!-- Core Motto Tags -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
+                        <span class="bg-red-500/20 border border-red-500/40 text-red-300 px-4 py-1.5 rounded-full font-bold text-sm tracking-widest">DREAM</span>
+                        <span class="bg-amber-500/20 border border-amber-500/40 text-amber-300 px-4 py-1.5 rounded-full font-bold text-sm tracking-widest">BELIEVE</span>
+                        <span class="bg-orange-500/20 border border-orange-500/40 text-orange-300 px-4 py-1.5 rounded-full font-bold text-sm tracking-widest">ACHIEVE</span>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#inquiry" class="bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white font-bold px-8 py-4 rounded-2xl shadow-xl shadow-orange-600/30 text-center transition-all transform hover:scale-105">
+                            <i class="fa-solid fa-user-plus mr-2"></i> Admission Inquiry
+                        </a>
+                        <a href="#contact" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold px-8 py-4 rounded-2xl text-center transition-all">
+                            <i class="fa-solid fa-phone mr-2"></i> Contact Mentors
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Quote / Card Feature Box -->
+                <div class="lg:col-span-5">
+                    <div class="quote-box p-8 rounded-3xl shadow-2xl relative overflow-hidden border border-white/20">
+                        <div class="absolute -right-10 -bottom-10 text-white/5 text-9font-black pointer-events-none">
+                            <i class="fa-solid fa-quote-right text-9xl"></i>
+                        </div>
+                        <div class="text-amber-400 font-bold text-sm uppercase tracking-wider mb-3">
+                            <i class="fa-solid fa-quote-left mr-2"></i> Inspiration Corner
+                        </div>
+                        <blockquote class="text-lg sm:text-xl font-medium text-slate-100 italic leading-relaxed mb-6">
+                            "ये दुनिया एक कर्मभूमि है, जहाँ काम सबको करना पड़ता है। वक़्त हमें सिर्फ तस्वीर देता है, रंग हमें भरना पड़ता है।"
+                        </blockquote>
+                        <div class="border-t border-white/10 pt-4 flex items-center justify-between text-xs text-slate-300 font-medium">
+                            <span>Dave Academy Philosophy</span>
+                            <span class="text-amber-300">Vadodara, Gujarat</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Highlights / Features Grid -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-red-600 font-bold tracking-widest text-sm uppercase bg-red-50 px-4 py-1.5 rounded-full">Why Choose Us</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3">Our Core Strengths</h2>
+                <p class="text-slate-600 mt-3">We provide comprehensive mentoring to ensure every student builds a strong academic foundation.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="card-hover bg-slate-50 border border-slate-100 p-8 rounded-3xl text-center group">
+                    <div class="w-16 h-16 mx-auto bg-red-100 group-hover:bg-red-600 text-red-600 group-hover:text-white rounded-2xl flex items-center justify-center text-2xl transition-colors shadow-md">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">EXPERT FACULTY</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Experienced & Dedicated Teachers committed to simplifying complex concepts for students.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card-hover bg-slate-50 border border-slate-100 p-8 rounded-3xl text-center group">
+                    <div class="w-16 h-16 mx-auto bg-orange-100 group-hover:bg-orange-600 text-orange-600 group-hover:text-white rounded-2xl flex items-center justify-center text-2xl transition-colors shadow-md">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">FOCUSED LEARNING</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Concept Based Teaching designed to build clarity, logical thinking, and long-term retention.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card-hover bg-slate-50 border border-slate-100 p-8 rounded-3xl text-center group">
+                    <div class="w-16 h-16 mx-auto bg-amber-100 group-hover:bg-amber-600 text-amber-600 group-hover:text-white rounded-2xl flex items-center justify-center text-2xl transition-colors shadow-md">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">BETTER RESULTS</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Proven Track Record of Excellence with consistent top grades achieved by our students.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="card-hover bg-slate-50 border border-slate-100 p-8 rounded-3xl text-center group">
+                    <div class="w-16 h-16 mx-auto bg-emerald-100 group-hover:bg-emerald-600 text-emerald-600 group-hover:text-white rounded-2xl flex items-center justify-center text-2xl transition-colors shadow-md">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">REGULAR TEST SERIES</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Structured evaluation process focused on Practice, Analyze, and Improve every week.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="card-hover bg-slate-50 border border-slate-100 p-8 rounded-3xl text-center group md:col-span-2 lg:col-span-2">
+                    <div class="w-16 h-16 mx-auto bg-purple-100 group-hover:bg-purple-600 text-purple-600 group-hover:text-white rounded-2xl flex items-center justify-center text-2xl transition-colors shadow-md">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mt-6 mb-2">PERSONAL ATTENTION</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed max-w-md mx-auto">Individual Care for Every Student with special doubt-solving sessions and parent-teacher coordination.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses & Grades Section -->
+    <section id="courses" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-orange-600 font-bold tracking-widest text-sm uppercase bg-orange-50 px-4 py-1.5 rounded-full">Academic Programs</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3">Courses & Mediums Offered</h2>
+                <p class="text-slate-600 mt-3">Tailored coaching classes for school students with expert study materials.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Grade 8 -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border border-slate-200 card-hover relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-2xl">Foundation</div>
+                    <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">08</div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Class 8th Coaching</h3>
+                    <p class="text-slate-600 text-sm mb-6">Building strong fundamental concepts in Science, Mathematics, and General subjects.</p>
+                    <div class="space-y-2 border-t border-slate-100 pt-4 text-sm font-semibold text-slate-700">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> English & Gujarati Medium</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> GSEB & CBSE Boards</div>
+                    </div>
+                </div>
+
+                <!-- Grade 9 -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border border-slate-200 card-hover relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-orange-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-2xl">Intermediate</div>
+                    <div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">09</div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Class 9th Coaching</h3>
+                    <p class="text-slate-600 text-sm mb-6">Rigorous practice and conceptual training to prepare students for board-level challenges.</p>
+                    <div class="space-y-2 border-t border-slate-100 pt-4 text-sm font-semibold text-slate-700">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> English & Gujarati Medium</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> GSEB & CBSE Boards</div>
+                    </div>
+                </div>
+
+                <!-- Grade 10 -->
+                <div class="bg-white rounded-3xl p-8 shadow-md border border-slate-200 card-hover relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-amber-600 text-white text-xs font-bold px-4 py-1.5 rounded-bl-2xl">Board Year</div>
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">10</div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Class 10th Board Spec.</h3>
+                    <p class="text-slate-600 text-sm mb-6">Special focus on Science, Physics, Chemistry, Biology & Maths with previous year paper solutions.</p>
+                    <div class="space-y-2 border-t border-slate-100 pt-4 text-sm font-semibold text-slate-700">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> English & Gujarati Medium</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> GSEB & CBSE Boards</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Faculty Contacts Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <span class="text-red-600 font-bold tracking-widest text-sm uppercase bg-red-50 px-4 py-1.5 rounded-full">Leadership & Mentors</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3 mb-6">Guided by Expert Educators</h2>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        At Dave Academy, our mentors bring years of teaching excellence. We believe in nurturing raw potential and converting hard work into smart success.
+                    </p>
+                    
+                    <!-- Mentor Cards -->
+                    <div class="space-y-4">
+                        <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-red-600 text-white rounded-xl flex items-center justify-center font-bold text-lg">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg">VIKAS DAVE SIR</h4>
+                                    <p class="text-xs text-slate-500 font-medium">Senior Faculty & Director</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <a href="tel:9427784296" class="w-10 h-10 bg-green-500 hover:bg-green-600 text-white rounded-xl flex items-center justify-center transition-colors shadow-md" title="Call Vikas Sir">
+                                    <i class="fa-solid fa-phone text-sm"></i>
+                                </a>
+                                <a href="https://wa.me/919427784296" target="_blank" class="w-10 h-10 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl flex items-center justify-center transition-colors shadow-md" title="WhatsApp Vikas Sir">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-orange-600 text-white rounded-xl flex items-center justify-center font-bold text-lg">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg">RAHUL BELDAR SIR</h4>
+                                    <p class="text-xs text-slate-500 font-medium">Expert Faculty & Mentor</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <a href="tel:7802980593" class="w-10 h-10 bg-green-500 hover:bg-green-600 text-white rounded-xl flex items-center justify-center transition-colors shadow-md" title="Call Rahul Sir">
+                                    <i class="fa-solid fa-phone text-sm"></i>
+                                </a>
+                                <a href="https://wa.me/917802980593" target="_blank" class="w-10 h-10 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl flex items-center justify-center transition-colors shadow-md" title="WhatsApp Rahul Sir">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Side Visual / Address Box -->
+                <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-8 sm:p-10 rounded-3xl shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-red-600/10 rounded-full blur-2xl pointer-events-none"></div>
+                    
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-location-dot text-red-500"></i> Visit Our Center
+                    </h3>
+                    
+                    <div class="space-y-6 text-slate-300">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-red-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white">FF, 104/105 Shree Avenue</p>
+                                <p class="text-sm">Opposite Swami Narayana Temple</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-orange-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-road"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white">Makrand Desai Road</p>
+                                <p class="text-sm">Vadodara, Gujarat</p>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-white/10 pt-6">
+                            <h4 class="text-amber-400 font-bold mb-2">Direct Phone Numbers:</h4>
+                            <p class="text-sm font-semibold mb-1">Vikas Dave Sir: <a href="tel:9427784296" class="text-white underline hover:text-orange-400">9427784296</a>, <a href="tel:9780046100" class="text-white underline hover:text-orange-400">9780046100</a></p>
+                            <p class="text-sm font-semibold">Rahul Beldar Sir: <a href="tel:7802980593" class="text-white underline hover:text-orange-400">7802980593</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Inquiry & Admission Section -->
+    <section id="inquiry" class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-zinc-900 text-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <span class="text-orange-400 font-bold tracking-widest text-sm uppercase bg-orange-500/10 px-4 py-1.5 rounded-full border border-orange-500/20">Get In Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-black mt-3">Admission & Inquiry Form</h2>
+                <p class="text-slate-400 mt-2">Fill out the quick form below and our faculty will get back to you immediately.</p>
+            </div>
+
+            <div class="bg-white/5 backdrop-blur-xl p-8 sm:p-10 rounded-3xl border border-white/10 shadow-2xl">
+                <form id="admission-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Student's Full Name</label>
+                            <input type="text" id="student_name" required class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-orange-500" placeholder="Enter student name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Parent's / Contact Phone Number</label>
+                            <input type="tel" id="phone_number" required class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-orange-500" placeholder="10-digit mobile number">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Select Grade / Class</label>
+                            <select id="grade" class="w-full bg-slate-800 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-500">
+                                <option value="8th">Class 8th</option>
+                                <option value="9th">Class 9th</option>
+                                <option value="10th" selected>Class 10th Board</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Medium</label>
+                            <select id="medium" class="w-full bg-slate-800 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-500">
+                                <option value="English">English Medium</option>
+                                <option value="Gujarati">Gujarati Medium</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Message or Subject Inquiry</label>
+                        <textarea id="message" rows="4" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-orange-500" placeholder="Mention subjects like Science, Maths, Physics or any specific query..."></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="w-full sm:w-auto bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white font-bold px-10 py-4 rounded-xl shadow-xl shadow-orange-600/30 transition-all transform hover:scale-105">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Submit Inquiry
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Success Message Box -->
+                <div id="success-msg" class="hidden mt-6 p-4 bg-emerald-500/20 border border-emerald-500/40 rounded-xl text-emerald-300 text-center font-medium">
+                    <i class="fa-solid fa-circle-check mr-2"></i> Thank you! Your inquiry has been submitted successfully. Vikas Sir or Rahul Sir will contact you shortly.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-red-600 to-orange-500 flex items-center justify-center text-white font-black text-xl">
+                            D
+                        </div>
+                        <span class="text-xl font-black text-white">DAVE ACADEMY</span>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        Hard Work Has No Substitute. Dedicated coaching for GSEB & CBSE 8th, 9th, and 10th standard students in Vadodara.
+                    </p>
+                    <div class="text-amber-400 font-bold text-xs tracking-wider">
+                        DREAM | BELIEVE | ACHIEVE
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Faculty</a></li>
+                        <li><a href="#courses" class="hover:text-white transition-colors">Courses & Classes</a></li>
+                        <li><a href="#features" class="hover:text-white transition-colors">Why Choose Us</a></li>
+                        <li><a href="#inquiry" class="hover:text-white transition-colors">Admission Form</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Contact Mentors</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li>
+                            <span class="text-white font-semibold block">Vikas Dave Sir</span>
+                            <a href="tel:9427784296" class="hover:text-orange-400">9427784296</a>, 
+                            <a href="tel:9780046100" class="hover:text-orange-400">9780046100</a>
+                        </li>
+                        <li>
+                            <span class="text-white font-semibold block">Rahul Beldar Sir</span>
+                            <a href="tel:7802980593" class="hover:text-orange-400">7802980593</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Location</h4>
+                    <p class="text-sm leading-relaxed mb-4">
+                        FF, 104/105 Shree Avenue, Opposite Swami Narayana Temple, Makrand Desai Road, Vadodara, Gujarat.
+                    </p>
+                    <div class="inline-block bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-xs text-amber-300">
+                        Guj. & Eng. Medium Special Coaching
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-slate-900 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 Dave Academy, Vadodara. All Rights Reserved.</p>
+                <p class="mt-2 sm:mt-0">Designed with dedication for academic excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submission Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const studentName = document.getElementById('student_name').value;
+            const phone = document.getElementById('phone_number').value;
+            const grade = document.getElementById('grade').value;
+            const medium = document.getElementById('medium').value;
+            
+            // Show success notification
+            const successMsg = document.getElementById('success-msg');
+            successMsg.classList.remove('hidden');
+            
+            // Reset form
+            document.getElementById('admission-form').reset();
+
+            // Hide message after 6 seconds
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>

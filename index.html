@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dave Academy & Dave Commerce Academy - Vadodara</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f4ff',
+              100: '#e0e9ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .bg-hero-pattern {
+      background-color: #0f172a;
+      background-image: radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.25) 0px, transparent 50%),
+                        radial-gradient(at 100% 100%, rgba(217, 119, 6, 0.2) 0px, transparent 50%);
+    }
+    .ticker-wrapper {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-content {
+      display: inline-block;
+      animation: ticker 28s linear infinite;
+    }
+    .ticker-content:hover {
+      animation-play-state: paused;
+    }
+    @keyframes ticker {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-600 selection:text-white">
+
+  <!-- Top Auspicious & Quick Action Bar -->
+  <div class="bg-slate-900 text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-slate-800 sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center space-x-2">
+        <span class="text-amber-400 font-semibold tracking-wider">॥ શ્રી ગણેશાય નમઃ ॥</span>
+        <span class="text-slate-600 hidden sm:inline">|</span>
+        <span class="hidden sm:inline text-slate-300 italic font-medium">"HARD WORK HAS NO SUBSTITUTE"</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="tel:9427784296" class="hover:text-amber-400 transition-colors flex items-center gap-1.5 font-medium">
+          <i class="fa-solid fa-phone text-amber-400 text-xs"></i> 9427784296
+        </a>
+        <a href="tel:7802980593" class="hover:text-amber-400 transition-colors flex items-center gap-1.5 font-medium hidden sm:flex">
+          <i class="fa-solid fa-mobile-screen text-amber-400 text-xs"></i> 7802980593
+        </a>
+        <a href="https://wa.me/919427784296" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1 rounded-full font-semibold text-xs transition-all flex items-center gap-1 shadow-sm">
+          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="bg-white border-b border-slate-200 shadow-sm sticky top-[37px] z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-gradient-to-tr from-brand-900 to-brand-600 rounded-xl flex items-center justify-center text-white font-display font-black text-2xl shadow-lg border border-amber-400/40">
+          DA
+        </div>
+        <div>
+          <h1 class="font-display font-extrabold text-xl sm:text-2xl text-slate-900 tracking-tight leading-none">
+            DAVE ACADEMY
+          </h1>
+          <p class="text-xs sm:text-sm font-semibold text-amber-600 tracking-wide uppercase mt-0.5">
+            & DAVE COMMERCE ACADEMY
+          </p>
+        </div>
+      </div>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="hidden lg:flex items-center space-x-8 font-medium text-sm text-slate-700">
+        <a href="#about" class="hover:text-brand-600 transition">About Us</a>
+        <a href="#courses" class="hover:text-brand-600 transition">Courses & Programs</a>
+        <a href="#college" class="hover:text-brand-600 transition">College Commerce</a>
+        <a href="#faculties" class="hover:text-brand-600 transition">Faculty</a>
+        <a href="#inquiry" class="hover:text-brand-600 transition">Admission Form</a>
+        <a href="#contact" class="hover:text-brand-600 transition">Contact & Location</a>
+      </nav>
+
+      <a href="#inquiry" class="hidden sm:inline-flex bg-brand-600 hover:bg-brand-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm shadow-md hover:shadow-lg transition-all duration-200">
+        Enroll Now <i class="fa-solid fa-arrow-right ml-2 self-center text-xs"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Notice Board Ticker -->
+  <div class="bg-amber-500 text-slate-950 font-semibold text-xs sm:text-sm py-2 px-4 shadow-inner flex items-center">
+    <div class="bg-slate-900 text-amber-400 text-xs uppercase px-2.5 py-1 rounded font-bold tracking-wider mr-3 flex-shrink-0 flex items-center gap-1.5">
+      <i class="fa-solid fa-bullhorn text-amber-400 animate-pulse"></i> NOTICE
+    </div>
+    <div class="ticker-wrapper w-full">
+      <div class="ticker-content flex items-center gap-8">
+        <span>🎓 Admissions Open for Academic Year 2024-25!</span>
+        <span>🔥 Special Batches for FY B.Com, SY B.Com & TY B.Com (Commerce Only)</span>
+        <span>📚 Class 8th, 9th & 10th (GSEB & CBSE - All Subjects) New Batches Starting Soon!</span>
+        <span>⚡ Class 11th & 12th Commerce & Science Stream Coaching Available</span>
+        <span>📍 Location: FF, 104/105 Shree Avenue, Opp. Swami Narayana Temple, Makrand Desai Road, Vadodara</span>
+        <span>📞 Contact Vikas Dave Sir: 9427784296 | Rahul Beldar Sir: 7802980593</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="bg-hero-pattern text-white py-16 sm:py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full">
+            <i class="fa-solid fa-award"></i> Premier Coaching Institute in Vadodara
+          </div>
+
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+            Empowering Minds from <span class="text-amber-400">Class 8</span> to <span class="text-blue-400">College Year 3</span>
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Focused & results-driven coaching for <strong class="text-white">Classes 8 to 12 (All Subjects & Streams)</strong> and specialized <strong class="text-amber-300">College Year 1, 2 & 3 Commerce (B.Com / BBA)</strong>.
+          </p>
+
+          <!-- Gujarati Motivational Quote Box -->
+          <div class="bg-slate-800/80 backdrop-blur border-l-4 border-amber-500 p-4 rounded-r-xl text-left max-w-2xl shadow-xl">
+            <p class="text-amber-300 text-xs uppercase font-bold tracking-widest mb-1"><i class="fa-solid fa-quote-left mr-1"></i> Inspiration</p>
+            <p class="text-slate-200 text-sm sm:text-base font-medium italic">
+              "ये दुनिया एक कर्मभूमि है, जहाँ काम सबको करना पड़ता है। वक्त हमें सिर्फ तस्वीर देता है, रंग हमें भरना पड़ता है।"
+            </p>
+          </div>
+
+          <!-- Core Values Badges -->
+          <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-3 text-xs sm:text-sm font-bold tracking-wider">
+            <span class="bg-blue-900/60 text-blue-300 border border-blue-700/50 px-4 py-2 rounded-lg flex items-center gap-2">
+              <i class="fa-solid fa-cloud-sun text-amber-400"></i> DREAM
+            </span>
+            <span class="bg-purple-900/60 text-purple-300 border border-purple-700/50 px-4 py-2 rounded-lg flex items-center gap-2">
+              <i class="fa-solid fa-brain text-amber-400"></i> BELIEVE
+            </span>
+            <span class="bg-emerald-900/60 text-emerald-300 border border-emerald-700/50 px-4 py-2 rounded-lg flex items-center gap-2">
+              <i class="fa-solid fa-trophy text-amber-400"></i> ACHIEVE
+            </span>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="#inquiry" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-8 py-3.5 rounded-xl text-center shadow-lg hover:shadow-amber-500/20 transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i> Inquire For Admission
+            </a>
+            <a href="https://wa.me/919427784296?text=Hello%20Dave%20Academy,%20I%20want%20information%20regarding%20admissions." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl text-center shadow-lg transition-all flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Quick Info Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-slate-900/90 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-md relative">
+            <div class="absolute -top-3 -right-3 bg-amber-500 text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-widest shadow-md">
+              GSEB & CBSE
+            </div>
+            <h3 class="text-xl font-display font-bold text-white mb-4 border-b border-slate-800 pb-3 flex items-center gap-2">
+              <i class="fa-solid fa-graduation-cap text-amber-400"></i> Academic Divisions
+            </h3>
+            
+            <div class="space-y-4">
+              <div class="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700 hover:border-amber-500/50 transition">
+                <div class="text-amber-400 font-bold text-sm uppercase tracking-wide">College Division (Commerce Only)</div>
+                <div class="text-white font-bold text-base mt-0.5">Year 1, Year 2 & Year 3 (B.Com / BBA)</div>
+                <div class="text-slate-400 text-xs mt-1">Accounts, Costing, Stats, Economics, Law & Tax</div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700 hover:border-blue-500/50 transition">
+                <div class="text-blue-400 font-bold text-sm uppercase tracking-wide">Higher Secondary (Class 11 & 12)</div>
+                <div class="text-white font-bold text-base mt-0.5">All Subjects & Streams</div>
+                <div class="text-slate-400 text-xs mt-1">Commerce (Accounts, Stats, Eco, BA) & Science</div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700 hover:border-emerald-500/50 transition">
+                <div class="text-emerald-400 font-bold text-sm uppercase tracking-wide">Secondary School (Class 8, 9 & 10)</div>
+                <div class="text-white font-bold text-base mt-0.5">All Core Subjects</div>
+                <div class="text-slate-400 text-xs mt-1">Maths, Science, English, SS & Gujarati / Hindi</div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800 text-center">
+              <p class="text-slate-400 text-xs">English & Gujarati Medium Available</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Strengths & Why Choose Us -->
+  <section id="about" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs uppercase font-extrabold text-amber-600 tracking-widest mb-2">Why Study With Us</h2>
+        <p class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Built For Academic Excellence & Personal Growth
+        </p>
+        <p class="text-slate-600 mt-3">
+          Dave Academy & Dave Commerce Academy provides comprehensive conceptual clarity, continuous practice, and top-tier mentorship.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+            <i class="fa-solid fa-chalkboard-user"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Expert Faculty Guidance</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Led by experienced mentors Vikas Dave Sir & Rahul Beldar Sir with decades of combined teaching experience.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+            <i class="fa-solid fa-clipboard-check"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Regular Test Series</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Chapter-wise evaluation tests, preliminary board exams, and college university exam pattern test papers.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+            <i class="fa-solid fa-user-group"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Personal Attention</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Small batch sizes ensuring individual doubt resolution and custom learning pace for every student.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-xl transition duration-300">
+          <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Proven Track Record</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Consistently producing top rankers in GSEB & CBSE board exams as well as College Commerce degree courses.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL SECTION: College Year 1, 2, 3 Commerce Only -->
+  <section id="college" class="py-16 bg-gradient-to-b from-slate-900 to-slate-950 text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-block bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full mb-3">
+          Exclusive Specialized Degree Coaching
+        </div>
+        <h2 class="font-display text-3xl sm:text-5xl font-black text-white">
+          College Commerce Division
+        </h2>
+        <p class="text-slate-400 mt-3 text-base sm:text-lg">
+          Dedicated, concept-oriented coaching exclusively for <strong>College Year 1, Year 2 & Year 3 (B.Com / BBA / M.Com)</strong> students in Vadodara.
+        </p>
+      </div>
+
+      <!-- College Cards Grid -->
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Year 1 (FY B.Com / BBA) -->
+        <div class="bg-slate-800/90 border-2 border-amber-500/30 rounded-2xl p-6 shadow-xl hover:border-amber-400 transition flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="bg-amber-500 text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase">Year 1 (FY)</span>
+              <span class="text-slate-400 text-xs font-semibold">Semester 1 & 2</span>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white mb-2">First Year Commerce</h3>
+            <p class="text-slate-300 text-sm mb-4">Building strong fundamentals for university degree exams.</p>
+
+            <h4 class="text-xs font-extrabold uppercase text-amber-400 tracking-wider mb-2">Core Subjects Covered:</h4>
+            <ul class="space-y-2 text-sm text-slate-300 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Financial Accounting</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Business Economics / Micro Economics</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Business Statistics & Mathematics</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Commercial Communication</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400 text-xs"></i> Elements of Management</li>
+            </ul>
+          </div>
+          <a href="#inquiry" class="block text-center bg-slate-700 hover:bg-amber-500 hover:text-slate-950 text-white font-bold py-2.5 rounded-xl transition text-sm">
+            Join FY Commerce Batch
+          </a>
+        </div>
+
+        <!-- Year 2 (SY B.Com / BBA) -->
+        <div class="bg-slate-800/90 border-2 border-blue-500/30 rounded-2xl p-6 shadow-xl hover:border-blue-400 transition flex flex-col justify-between relative">
+          <div class="absolute -top-3 right-4 bg-blue-500 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+            Most Popular
+          </div>
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="bg-blue-600 text-white font-black text-xs px-3 py-1 rounded-full uppercase">Year 2 (SY)</span>
+              <span class="text-slate-400 text-xs font-semibold">Semester 3 & 4</span>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white mb-2">Second Year Commerce</h3>
+            <p class="text-slate-300 text-sm mb-4">Advanced specialized accounting and corporate management concepts.</p>
+
+            <h4 class="text-xs font-extrabold uppercase text-blue-400 tracking-wider mb-2">Core Subjects Covered:</h4>
+            <ul class="space-y-2 text-sm text-slate-300 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-400 text-xs"></i> Corporate Accounting</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-400 text-xs"></i> Cost Accounting</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-400 text-xs"></i> Advanced Business Statistics</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-400 text-xs"></i> Macro Economics & Public Finance</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-400 text-xs"></i> Mercantile & Company Law</li>
+            </ul>
+          </div>
+          <a href="#inquiry" class="block text-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-2.5 rounded-xl transition text-sm">
+            Join SY Commerce Batch
+          </a>
+        </div>
+
+        <!-- Year 3 (TY B.Com / BBA) -->
+        <div class="bg-slate-800/90 border-2 border-emerald-500/30 rounded-2xl p-6 shadow-xl hover:border-emerald-400 transition flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="bg-emerald-500 text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase">Year 3 (TY)</span>
+              <span class="text-slate-400 text-xs font-semibold">Semester 5 & 6</span>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white mb-2">Third Year Commerce</h3>
+            <p class="text-slate-300 text-sm mb-4">Final year degree mastery, tax laws, auditing, and financial decision-making.</p>
+
+            <h4 class="text-xs font-extrabold uppercase text-emerald-400 tracking-wider mb-2">Core Subjects Covered:</h4>
+            <ul class="space-y-2 text-sm text-slate-300 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i> Management Accounting</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i> Income Tax & Practice</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i> Auditing & Corporate Governance</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i> Financial Management</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400 text-xs"></i> International Economics</li>
+            </ul>
+          </div>
+          <a href="#inquiry" class="block text-center bg-slate-700 hover:bg-emerald-500 hover:text-slate-950 text-white font-bold py-2.5 rounded-xl transition text-sm">
+            Join TY Commerce Batch
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Note banner for college commerce -->
+      <div class="mt-10 bg-slate-800/50 border border-slate-700 p-4 rounded-xl text-center text-slate-300 text-xs sm:text-sm">
+        <i class="fa-solid fa-info-circle text-amber-400 mr-1"></i> Special batch timings available for regular college students. Notes, solved previous year papers & exam key revision modules provided.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- School Programs Explorer (Classes 8th to 12th) -->
+  <section id="courses" class="py-16 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs uppercase font-extrabold text-brand-600 tracking-widest mb-2">School Academics</h2>
+        <p class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Classes 8th to 12th (All Subjects & Streams)
+        </p>
+        <p class="text-slate-600 mt-2">
+          GSEB & CBSE Boards | English & Gujarati Medium
+        </p>
+      </div>
+
+      <!-- Interactive Filter Tabs -->
+      <div class="flex justify-center mb-8">
+        <div class="inline-flex bg-white p-1.5 rounded-xl border border-slate-300 shadow-sm gap-1">
+          <button onclick="switchTab('all')" id="tab-all" class="tab-btn px-5 py-2 rounded-lg text-sm font-bold bg-brand-600 text-white transition">
+            All Classes
+          </button>
+          <button onclick="switchTab('hs')" id="tab-hs" class="tab-btn px-5 py-2 rounded-lg text-sm font-bold text-slate-600 hover:text-slate-900 transition">
+            Class 11 & 12
+          </button>
+          <button onclick="switchTab('sec')" id="tab-sec" class="tab-btn px-5 py-2 rounded-lg text-sm font-bold text-slate-600 hover:text-slate-900 transition">
+            Class 8, 9 & 10
+          </button>
+        </div>
+      </div>
+
+      <!-- Course Cards Container -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Class 12 -->
+        <div class="course-card hs bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition">
+          <div class="flex justify-between items-center mb-3">
+            <span class="bg-red-100 text-red-700 font-extrabold text-xs px-3 py-1 rounded-full uppercase">Board Batch</span>
+            <span class="text-xs font-semibold text-slate-500">GSEB / CBSE</span>
+          </div>
+          <h3 class="font-display text-2xl font-extrabold text-slate-900 mb-2">Class 12th (Std. 12)</h3>
+          <p class="text-slate-600 text-sm mb-4">Board Exam Mastery program with intensive practice & preliminary test series.</p>
+          
+          <div class="space-y-3 border-t border-slate-100 pt-3">
+            <div>
+              <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Commerce Stream:</span>
+              <p class="text-slate-700 text-xs font-medium mt-0.5">Elements of Accounts, Secretarial Practice & BA, Statistics, Economics, English.</p>
+            </div>
+            <div>
+              <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Science Stream:</span>
+              <p class="text-slate-700 text-xs font-medium mt-0.5">Physics, Chemistry, Mathematics, Biology, English.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Class 11 -->
+        <div class="course-card hs bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition">
+          <div class="flex justify-between items-center mb-3">
+            <span class="bg-indigo-100 text-indigo-700 font-extrabold text-xs px-3 py-1 rounded-full uppercase">Foundation Year</span>
+            <span class="text-xs font-semibold text-slate-500">GSEB / CBSE</span>
+          </div>
+          <h3 class="font-display text-2xl font-extrabold text-slate-900 mb-2">Class 11th (Std. 11)</h3>
+          <p class="text-slate-600 text-sm mb-4">Core conceptual foundation for Commerce & Science higher education.</p>
+          
+          <div class="space-y-3 border-t border-slate-100 pt-3">
+            <div>
+              <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Commerce Stream:</span>
+              <p class="text-slate-700 text-xs font-medium mt-0.5">Accounts, Business Administration, Statistics, Economics, English.</p>
+            </div>
+            <div>
+              <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Science Stream:</span>
+              <p class="text-slate-700 text-xs font-medium mt-0.5">Physics, Chemistry, Maths / Biology, Computer / English.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Class 10 -->
+        <div class="course-card sec bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition">
+          <div class="flex justify-between items-center mb-3">
+            <span class="bg-red-100 text-red-700 font-extrabold text-xs px-3 py-1 rounded-full uppercase">SSC Board</span>
+            <span class="text-xs font-semibold text-slate-500">All Subjects</span>
+          </div>
+          <h3 class="font-display text-2xl font-extrabold text-slate-900 mb-2">Class 10th (Std. 10)</h3>
+          <p class="text-slate-600 text-sm mb-4">Complete 10th Board preparation with regular Sunday mock tests and doubt sessions.</p>
+          
+          <div class="border-t border-slate-100 pt-3">
+            <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Subjects Included:</span>
+            <p class="text-slate-700 text-xs font-medium mt-0.5">Mathematics, Science, Social Science, English, Gujarati, Hindi.</p>
+          </div>
+        </div>
+
+        <!-- Class 9 -->
+        <div class="course-card sec bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition">
+          <div class="flex justify-between items-center mb-3">
+            <span class="bg-emerald-100 text-emerald-700 font-extrabold text-xs px-3 py-1 rounded-full uppercase">Secondary</span>
+            <span class="text-xs font-semibold text-slate-500">All Subjects</span>
+          </div>
+          <h3 class="font-display text-2xl font-extrabold text-slate-900 mb-2">Class 9th (Std. 9)</h3>
+          <p class="text-slate-600 text-sm mb-4">Building strong base in Science & Mathematics to prepare for Class 10 Board year.</p>
+          
+          <div class="border-t border-slate-100 pt-3">
+            <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Subjects Included:</span>
+            <p class="text-slate-700 text-xs font-medium mt-0.5">Maths, Science, Social Science, English Grammar & Languages.</p>
+          </div>
+        </div>
+
+        <!-- Class 8 -->
+        <div class="course-card sec bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition">
+          <div class="flex justify-between items-center mb-3">
+            <span class="bg-purple-100 text-purple-700 font-extrabold text-xs px-3 py-1 rounded-full uppercase">Middle School</span>
+            <span class="text-xs font-semibold text-slate-500">All Subjects</span>
+          </div>
+          <h3 class="font-display text-2xl font-extrabold text-slate-900 mb-2">Class 8th (Std. 8)</h3>
+          <p class="text-slate-600 text-sm mb-4">Focus on logical reasoning, numerical skills, and scientific curiosity.</p>
+          
+          <div class="border-t border-slate-100 pt-3">
+            <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Subjects Included:</span>
+            <p class="text-slate-700 text-xs font-medium mt-0.5">Mathematics, Science, Social Studies, English, Vernacular Subjects.</p>
+          </div>
+        </div>
+
+        <!-- Medium Availability Card -->
+        <div class="course-card hs sec bg-gradient-to-br from-brand-900 to-slate-900 text-white rounded-2xl p-6 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="bg-amber-500 text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase inline-block mb-3">
+              Dual Medium Support
+            </div>
+            <h3 class="font-display text-2xl font-bold mb-2">English & Gujarati Medium</h3>
+            <p class="text-slate-300 text-xs leading-relaxed">
+              Separate dedicated batches and study materials for both English Medium and Gujarati Medium students for maximum clarity and understanding.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-800">
+            <a href="#inquiry" class="text-amber-400 hover:text-amber-300 text-sm font-bold flex items-center justify-between">
+              <span>Book A Free Demo Class</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Faculty / Mentors Section -->
+  <section id="faculties" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-xs uppercase font-extrabold text-amber-600 tracking-widest mb-2">Our Mentors</h2>
+        <p class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Learn From Experienced Educators
+        </p>
+        <p class="text-slate-600 mt-2">Dedicated leadership bringing individual mentorship and academic excellence.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        <!-- Vikas Dave Sir -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-center sm:items-start shadow-sm hover:shadow-lg transition">
+          <div class="w-24 h-24 bg-gradient-to-tr from-amber-500 to-amber-300 rounded-2xl flex items-center justify-center text-slate-950 font-display font-black text-3xl shadow-md flex-shrink-0">
+            VD
+          </div>
+          <div>
+            <span class="bg-amber-100 text-amber-800 font-bold text-xs px-2.5 py-1 rounded">Director & Lead Mentor</span>
+            <h3 class="font-display text-2xl font-extrabold text-slate-900 mt-2">Vikas Dave Sir</h3>
+            <p class="text-slate-600 text-sm mt-1 mb-4">Senior Faculty for Commerce, Accounts & Higher Secondary Education.</p>
+            <div class="space-y-1 text-sm font-semibold text-slate-700">
+              <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-amber-600"></i> 9427784296</p>
+              <p class="flex items-center gap-2"><i class="fa-solid fa-mobile-screen text-amber-600"></i> 9780046100</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rahul Beldar Sir -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-center sm:items-start shadow-sm hover:shadow-lg transition">
+          <div class="w-24 h-24 bg-gradient-to-tr from-brand-600 to-blue-400 rounded-2xl flex items-center justify-center text-white font-display font-black text-3xl shadow-md flex-shrink-0">
+            RB
+          </div>
+          <div>
+            <span class="bg-blue-100 text-blue-800 font-bold text-xs px-2.5 py-1 rounded">Co-Director & Faculty</span>
+            <h3 class="font-display text-2xl font-extrabold text-slate-900 mt-2">Rahul Beldar Sir</h3>
+            <p class="text-slate-600 text-sm mt-1 mb-4">Expert Academician for Secondary Schooling & Mathematics / Sciences.</p>
+            <div class="space-y-1 text-sm font-semibold text-slate-700">
+              <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-600"></i> 7802980593</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Direct Online Admission / Inquiry Form Section -->
+  <section id="inquiry" class="py-16 bg-slate-900 text-white relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-10">
+        <span class="bg-amber-500 text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-widest">
+          Admission Open 2024-2025
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-black mt-3">
+          Online Admission & Inquiry Form
+        </h2>
+        <p class="text-slate-400 text-sm mt-2">Fill out your details below. Our team will get back to you immediately.</p>
+      </div>
+
+      <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-6 sm:p-10 shadow-2xl">
+        <form id="admissionForm" onsubmit="handleInquirySubmit(event)" class="space-y-6">
+          
+          <div class="grid sm:grid-cols-2 gap-6">
+            <!-- Student Name -->
+            <div>
+              <label class="block text-xs font-extrabold uppercase text-slate-300 tracking-wider mb-2">
+                Student Full Name *
+              </label>
+              <input type="text" required placeholder="e.g. Patel Raj" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition">
+            </div>
+
+            <!-- Phone Number -->
+            <div>
+              <label class="block text-xs font-extrabold uppercase text-slate-300 tracking-wider mb-2">
+                Contact Number / WhatsApp *
+              </label>
+              <input type="tel" required placeholder="e.g. 9876543210" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition">
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-6">
+            <!-- Course / Class Dropdown -->
+            <div>
+              <label class="block text-xs font-extrabold uppercase text-slate-300 tracking-wider mb-2">
+                Select Class / College Year *
+              </label>
+              <select required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition">
+                <option value="">-- Choose Your Class / Year --</option>
+                <optgroup label="College Division (Commerce Only)">
+                  <option value="College FY">College Year 1 (FY B.Com / BBA)</option>
+                  <option value="College SY">College Year 2 (SY B.Com / BBA)</option>
+                  <option value="College TY">College Year 3 (TY B.Com / BBA)</option>
+                </optgroup>
+                <optgroup label="Higher Secondary (Classes 11 & 12)">
+                  <option value="Class 12 Commerce">Class 12 Commerce</option>
+                  <option value="Class 12 Science">Class 12 Science</option>
+                  <option value="Class 11 Commerce">Class 11 Commerce</option>
+                  <option value="Class 11 Science">Class 11 Science</option>
+                </optgroup>
+                <optgroup label="Secondary School (Classes 8 to 10)">
+                  <option value="Class 10">Class 10th (All Subjects)</option>
+                  <option value="Class 9">Class 9th (All Subjects)</option>
+                  <option value="Class 8">Class 8th (All Subjects)</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <!-- Board / Medium Dropdown -->
+            <div>
+              <label class="block text-xs font-extrabold uppercase text-slate-300 tracking-wider mb-2">
+                Medium of Instruction *
+              </label>
+              <select required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition">
+                <option value="English Medium">English Medium</option>
+                <option value="Gujarati Medium">Gujarati Medium</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Message / Remarks -->
+          <div>
+            <label class="block text-xs font-extrabold uppercase text-slate-300 tracking-wider mb-2">
+              Any Specific Query / School Name
+            </label>
+            <textarea rows="3" placeholder="Write any specific questions or mention your current school/college..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 transition"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-4 rounded-xl shadow-lg transition duration-200 text-base uppercase tracking-wider flex items-center justify-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Submit Admission Inquiry
+          </button>
+        </form>
+
+        <!-- Message Alert Area -->
+        <div id="formSuccessMessage" class="hidden mt-6 bg-emerald-900/80 border border-emerald-500 text-emerald-200 p-4 rounded-xl text-center text-sm font-semibold">
+          <i class="fa-solid fa-circle-check text-emerald-400 mr-2 text-lg"></i> Thank you! Your inquiry has been submitted successfully. Our team will contact you shortly.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact, Address & Location Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Left Address Info -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <h2 class="text-xs uppercase font-extrabold text-amber-600 tracking-widest mb-1">Get In Touch</h2>
+            <h3 class="font-display text-3xl font-black text-slate-900">Visit Our Campus</h3>
+            <p class="text-slate-600 text-sm mt-2">Conveniently located in Vadodara with easy access for students.</p>
+          </div>
+
+          <div class="space-y-4">
+            
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="w-10 h-10 bg-amber-500 text-slate-950 rounded-lg flex items-center justify-center font-bold flex-shrink-0">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="flex-1">
+                <h4 class="font-bold text-slate-900 text-sm">Official Address</h4>
+                <p class="text-slate-600 text-sm mt-0.5 leading-relaxed">
+                  FF, 104/105 Shree Avenue, Opposite Swaminarayan Temple, Makrand Desai Road, Vadodara, Gujarat.
+                </p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Shree+Avenue+Makrand+Desai+Road+Vadodara" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 mt-3 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-black px-4 py-2 rounded-lg shadow transition">
+                  <i class="fa-solid fa-diamond-turn-right"></i> Open Directions in Google Maps
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="w-10 h-10 bg-brand-600 text-white rounded-lg flex items-center justify-center font-bold flex-shrink-0">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">Call & Helpline Contacts</h4>
+                <p class="text-slate-700 text-sm mt-0.5 font-medium">
+                  Vikas Dave Sir: <a href="tel:9427784296" class="text-brand-600 hover:underline">9427784296</a> / <a href="tel:9780046100" class="text-brand-600 hover:underline">9780046100</a>
+                </p>
+                <p class="text-slate-700 text-sm mt-0.5 font-medium">
+                  Rahul Beldar Sir: <a href="tel:7802980593" class="text-brand-600 hover:underline">7802980593</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <div class="w-10 h-10 bg-emerald-600 text-white rounded-lg flex items-center justify-center font-bold flex-shrink-0">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">Class Working Hours</h4>
+                <p class="text-slate-600 text-sm mt-0.5">
+                  Monday – Saturday: 7:00 AM – 8:30 PM<br>
+                  Sunday: Special Test Series & Extra Doubt Classes
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Embedded Map (No API Key Required) -->
+        <div class="lg:col-span-7 bg-slate-100 rounded-2xl overflow-hidden border border-slate-300 shadow-md h-[420px] relative">
+          <iframe 
+            title="Dave Academy Location Map"
+            src="https://maps.google.com/maps?q=Shree%20Avenue%2C%20Makrand%20Desai%20Road%2C%20Vadodara%2C%20Gujarat&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 text-sm py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+        <div>
+          <h4 class="font-display font-extrabold text-white text-xl">DAVE ACADEMY & COMMERCE ACADEMY</h4>
+          <p class="text-xs text-slate-500 mt-1">॥ શ્રી ગણેશાય નમઃ ॥ | "HARD WORK HAS NO SUBSTITUTE"</p>
+        </div>
+        <div class="text-xs text-slate-500">
+          FF, 104/105 Shree Avenue, Opp. Swami Narayana Temple, Makrand Desai Road, Vadodara, Gujarat.
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-slate-900 text-center text-xs text-slate-600">
+        &copy; 2024 Dave Academy & Dave Commerce Academy. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple Tab Filtering & Form Script -->
+  <script>
+    function switchTab(category) {
+      const cards = document.querySelectorAll('.course-card');
+      const tabs = document.querySelectorAll('.tab-btn');
+
+      tabs.forEach(tab => {
+        tab.classList.remove('bg-brand-600', 'text-white');
+        tab.classList.add('text-slate-600');
+      });
+
+      const activeTab = document.getElementById('tab-' + category);
+      if (activeTab) {
+        activeTab.classList.add('bg-brand-600', 'text-white');
+        activeTab.classList.remove('text-slate-600');
+      }
+
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'block';
+        } else if (card.classList.contains(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      document.getElementById('formSuccessMessage').classList.remove('hidden');
+      document.getElementById('admissionForm').reset();
+    }
+  </script>
+
+</body>
+</html>

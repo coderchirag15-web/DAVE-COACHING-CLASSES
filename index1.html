@@ -1,884 +1,346 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAVE COMMERCE ACADEMY | Premier Coaching Center Vadodara</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome 6 CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Outfit:wght@500;700;800;900&display=swap" rel="stylesheet">
-    <!-- Canvas Confetti CDN for celebratory form submit -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        heading: ['"Outfit"', 'sans-serif']
-                    },
-                    colors: {
-                        neonPink: '#ff007f',
-                        neonPurple: '#7928ca',
-                        neonCyan: '#00f2fe',
-                        electricGold: '#ffb703',
-                        vibrantOrange: '#ff4800',
-                        emeraldNeon: '#00f5d4'
-                    },
-                    animation: {
-                        'gradient-x': 'gradient-x 8s ease infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'float-slow': 'float 10s ease-in-out infinite',
-                        'pulse-glow': 'pulseGlow 2.5s infinite',
-                        'spin-slow': 'spin 15s linear infinite'
-                    },
-                    keyframes: {
-                        'gradient-x': {
-                            '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
-                            '50%': { 'background-size': '200% 200%', 'background-position': 'right center' }
-                        },
-                        'float': {
-                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
-                            '50%': { transform: 'translateY(-18px) rotate(3deg)' }
-                        },
-                        'pulseGlow': {
-                            '0%, 100%': { boxShadow: '0 0 15px rgba(255, 0, 127, 0.4), 0 0 30px rgba(0, 242, 254, 0.3)' },
-                            '50%': { boxShadow: '0 0 30px rgba(255, 0, 127, 0.8), 0 0 60px rgba(0, 242, 254, 0.6)' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
+    <title>DAVE ACADEMY & COMMERCE ACADEMY</title>
     <style>
-        .ultra-gradient-bg {
-            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #4a00e0, #8e2de2);
-            background-size: 400% 400%;
-            animation: gradient-x 12s ease infinite;
+        /* Base Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
         }
 
-        .rainbow-border {
-            border: 3px solid transparent;
-            background-image: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)), 
-                              radial-gradient(circle at top left, #ff007f, #00f2fe, #ffb703, #7928ca);
-            background-origin: border-box;
-            background-clip: padding-box, border-box;
+        /* Top Bar & Header */
+        header {
+            background-color: #8b0000; /* Red Tone */
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
         }
 
-        .glass-colorful {
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
+        header h1 {
+            margin: 5px 0;
+            font-size: 32px;
+            letter-spacing: 1px;
         }
 
-        .glass-colorful-light {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            border: 2px solid rgba(255, 255, 255, 0.6);
+        header p {
+            margin: 5px 0;
+            font-style: italic;
+            color: #ffeb3b;
         }
 
-        .text-rainbow {
-            background: linear-gradient(135deg, #ff007f 0%, #ff4800 25%, #ffb703 50%, #00f2fe 75%, #7928ca 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% auto;
-            animation: gradient-x 5s ease infinite;
+        /* Navigation Bar */
+        nav {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .card-hover-pop {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .card-hover-pop:hover {
-            transform: translateY(-10px) scale(1.02);
+        nav a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        .shimmer-button {
-            position: relative;
-            overflow: hidden;
+        nav a:hover {
+            background-color: #8b0000;
         }
-        .shimmer-button::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transform: rotate(30deg);
-            transition: all 0.8s ease;
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
         }
-        .shimmer-button:hover::after {
-            left: 100%;
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 10px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff9800;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        /* Content Container */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #8b0000;
+            margin-bottom: 20px;
+            font-size: 24px;
+            border-bottom: 2px solid #8b0000;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Courses Grid */
+        .grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1;
+            min-width: 280px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #8b0000;
+            margin-top: 0;
+        }
+
+        .card ul {
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+
+        /* Quote Section */
+        .quote-box {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #856404;
+        }
+
+        /* Contact & Map Section */
+        .contact-flex {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 280px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .map-box {
+            flex: 1;
+            min-width: 280px;
+            height: 300px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 8px;
+        }
+
+        /* Form Styling */
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #8b0000;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 14px;
         }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-neonPink selection:text-white">
+<body>
 
-    <!-- Floating Background Color Orbs -->
-    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
-        <div class="absolute -top-40 -left-40 w-96 h-96 bg-neonPink/30 rounded-full blur-3xl animate-float"></div>
-        <div class="absolute top-1/3 -right-40 w-[30rem] h-[30rem] bg-neonCyan/25 rounded-full blur-3xl animate-float-slow"></div>
-        <div class="absolute bottom-10 left-1/4 w-96 h-96 bg-electricGold/20 rounded-full blur-3xl animate-pulse"></div>
-        <div class="absolute -bottom-20 right-10 w-96 h-96 bg-neonPurple/30 rounded-full blur-3xl animate-float"></div>
-    </div>
-
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-neonPink via-electricGold to-neonCyan text-slate-950 font-extrabold text-xs sm:text-sm py-2 px-4 shadow-lg text-center tracking-wide uppercase relative z-50">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <span class="hidden sm:inline"><i class="fa-solid fa-om mr-1"></i> શ્રી ગણેશાય નમઃ</span>
-            <span class="mx-auto sm:mx-0 flex items-center gap-2">
-                <span class="inline-block w-2.5 h-2.5 rounded-full bg-slate-950 animate-ping"></span>
-                <strong>ADMISSIONS OPEN FOR NEW BATCHES (CLASS 8TH TO 12TH & COLLEGE 1st, 2nd, 3rd YEAR)!</strong>
-            </span>
-            <span class="hidden md:inline font-black"><i class="fa-solid fa-star"></i> HARD WORK HAS NO SUBSTITUTE</span>
-        </div>
-    </div>
-
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-40 glass-colorful backdrop-blur-xl border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
-                <a href="#home" class="flex items-center gap-3 group">
-                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-neonPink via-vibrantOrange to-electricGold p-0.5 shadow-lg shadow-neonPink/30 animate-pulse-glow">
-                        <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-white">
-                            <i class="fa-solid fa-graduation-cap text-2xl text-neonCyan"></i>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="font-heading font-black text-2xl sm:text-3xl text-white tracking-tight leading-none block group-hover:scale-105 transition-transform">
-                            DAVE <span class="text-rainbow">ACADEMY</span>
-                        </span>
-                        <span class="text-[10px] font-bold text-electricGold tracking-widest uppercase">Commerce & Science Institute</span>
-                    </div>
-                </a>
-
-                <!-- Desktop Nav -->
-                <nav class="hidden lg:flex items-center gap-8 text-sm font-bold tracking-wide">
-                    <a href="#home" class="text-white hover:text-neonCyan transition-colors flex items-center gap-1.5"><i class="fa-solid fa-house text-neonPink"></i> Home</a>
-                    <a href="#about" class="text-slate-300 hover:text-neonCyan transition-colors flex items-center gap-1.5"><i class="fa-solid fa-star text-electricGold"></i> Why DCA</a>
-                    <a href="#mentors" class="text-slate-300 hover:text-neonCyan transition-colors flex items-center gap-1.5"><i class="fa-solid fa-chalkboard-user text-emeraldNeon"></i> Mentors</a>
-                    <a href="#courses" class="text-slate-300 hover:text-neonCyan transition-colors flex items-center gap-1.5"><i class="fa-solid fa-book-open text-neonPurple"></i> Courses</a>
-                    <a href="#calculator" class="text-slate-300 hover:text-neonCyan transition-colors flex items-center gap-1.5"><i class="fa-solid fa-calculator text-vibrantOrange"></i> Fee Estimator</a>
-                    <a href="#contact" class="text-slate-300 hover:text-neonCyan transition-colors flex items-center gap-1.5"><i class="fa-solid fa-paper-plane text-neonCyan"></i> Contact</a>
-                </nav>
-
-                <!-- Header Action Buttons -->
-                <div class="hidden sm:flex items-center gap-3">
-                    <a href="https://wa.me/919427784296?text=Hello%20Dave%20Academy,%20I%20am%20interested%20in%20taking%20admission." target="_blank" class="shimmer-button bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-500/30 flex items-center gap-2 text-sm transition-transform active:scale-95">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> Quick WhatsApp
-                    </a>
-                </div>
-
-                <!-- Mobile Hamburger Button -->
-                <button id="mobileNavToggle" class="lg:hidden text-white text-2xl focus:outline-none p-2 rounded-lg bg-white/10">
-                    <i class="fa-solid fa-bars-staggered"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Container -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-slate-900/95 border-b border-white/10 px-6 py-6 space-y-4 font-bold text-slate-200">
-            <a href="#home" class="block hover:text-neonCyan py-1">Home</a>
-            <a href="#about" class="block hover:text-neonCyan py-1">Why DCA</a>
-            <a href="#mentors" class="block hover:text-neonCyan py-1">Our Mentors</a>
-            <a href="#courses" class="block hover:text-neonCyan py-1">Courses Offered</a>
-            <a href="#calculator" class="block hover:text-neonCyan py-1">Fee Estimator</a>
-            <a href="#contact" class="block hover:text-neonCyan py-1">Contact Us</a>
-            <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
-                <a href="tel:9427784296" class="w-full text-center bg-gradient-to-r from-neonPink to-vibrantOrange text-white py-3 rounded-xl font-bold">
-                    <i class="fa-solid fa-phone"></i> Call Vikas Dave Sir
-                </a>
-                <a href="tel:7802980593" class="w-full text-center bg-gradient-to-r from-neonCyan to-neonPurple text-slate-950 py-3 rounded-xl font-bold">
-                    <i class="fa-solid fa-phone"></i> Call Rahul Beldar Sir
-                </a>
-            </div>
-        </div>
+    <!-- Header -->
+    <header>
+        <p>॥ श्री गणेशाय नमः ॥</p>
+        <h1>DAVE ACADEMY</h1>
+        <p>"HARD WORK HAS NO SUBSTITUTE"</p>
     </header>
 
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact & Location</a>
+        <a href="#inquiry">Admission Inquiry</a>
+    </nav>
+
     <!-- Hero Section -->
-    <section id="home" class="relative z-10 pt-12 pb-24 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Text Content -->
-                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-neonPink/20 via-neonPurple/20 to-neonCyan/20 border border-neonPink/40 px-4 py-2 rounded-full text-xs sm:text-sm font-extrabold text-amber-300 backdrop-blur-md">
-                        <i class="fa-solid fa-fire text-vibrantOrange animate-bounce"></i>
-                        Vadodara's Most Vibrant Coaching Center
-                    </div>
+    <div class="hero">
+        <h2>Welcome to Dave Commerce & School Academy</h2>
+        <p>Experienced & Dedicated Teachers | Concept Based Teaching | Regular Test Series</p>
+        <a href="#inquiry" class="btn">Apply Now</a>
+    </div>
 
-                    <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-none">
-                        Unleash Your <span class="text-rainbow">Full Potential</span> with Dave Academy!
-                    </h1>
+    <div class="container">
 
-                    <p class="text-slate-300 text-lg sm:text-xl font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                        Expert coaching for <strong class="text-electricGold">Class 8th to 12th (GSEB/CBSE - Eng & Guj Medium)</strong> and <strong class="text-neonCyan">College Graduation (F.Y., S.Y., T.Y. B.Com, BBA, BCA, M.Com)</strong> with guaranteed individual care!
-                    </p>
-
-                    <!-- Key Slogan Badge Box -->
-                    <div class="p-4 rounded-2xl bg-gradient-to-r from-neonPink/20 via-electricGold/20 to-emeraldNeon/20 border border-white/20 backdrop-blur-md flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                        <span class="bg-neonPink text-white font-extrabold px-3 py-1 rounded-lg text-xs tracking-wider uppercase">DREAM</span>
-                        <i class="fa-solid fa-chevron-right text-slate-400 text-xs"></i>
-                        <span class="bg-electricGold text-slate-950 font-extrabold px-3 py-1 rounded-lg text-xs tracking-wider uppercase">BELIEVE</span>
-                        <i class="fa-solid fa-chevron-right text-slate-400 text-xs"></i>
-                        <span class="bg-emeraldNeon text-slate-950 font-extrabold px-3 py-1 rounded-lg text-xs tracking-wider uppercase">ACHIEVE</span>
-                    </div>
-
-                    <!-- CTA Action Buttons -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#contact" class="shimmer-button w-full sm:w-auto bg-gradient-to-r from-neonPink via-vibrantOrange to-electricGold text-slate-950 font-black text-lg px-8 py-4 rounded-2xl shadow-xl shadow-neonPink/30 hover:scale-105 transition-all text-center flex items-center justify-center gap-3">
-                            <i class="fa-solid fa-rocket text-xl"></i> Enroll For Free Demo
-                        </a>
-                        <a href="#calculator" class="w-full sm:w-auto glass-colorful hover:bg-white/20 text-white font-bold text-lg px-8 py-4 rounded-2xl border border-white/30 text-center flex items-center justify-center gap-3 transition-all">
-                            <i class="fa-solid fa-calculator text-neonCyan"></i> Calculate Fees
-                        </a>
-                    </div>
-
-                    <!-- Quick Stats -->
-                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 max-w-xl mx-auto lg:mx-0">
-                        <div class="text-center lg:text-left">
-                            <div class="font-heading font-black text-3xl sm:text-4xl text-neonPink">20+</div>
-                            <div class="text-xs font-bold text-slate-400 uppercase">Years Excellence</div>
-                        </div>
-                        <div class="text-center lg:text-left">
-                            <div class="font-heading font-black text-3xl sm:text-4xl text-neonCyan">100%</div>
-                            <div class="text-xs font-bold text-slate-400 uppercase">Concept Clarity</div>
-                        </div>
-                        <div class="text-center lg:text-left">
-                            <div class="font-heading font-black text-3xl sm:text-4xl text-emeraldNeon">1000s</div>
-                            <div class="text-xs font-bold text-slate-400 uppercase">Happy Toppers</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Interactive Hero Graphic -->
-                <div class="lg:col-span-5 relative">
-                    <div class="relative mx-auto max-w-md">
-                        <!-- Rainbow Neon Frame -->
-                        <div class="absolute -inset-2 bg-gradient-to-r from-neonPink via-electricGold via-emeraldNeon to-neonPurple rounded-3xl blur-xl opacity-75 animate-pulse-glow"></div>
-                        
-                        <div class="relative bg-slate-900 rounded-3xl p-6 sm:p-8 border border-white/20 shadow-2xl space-y-6">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-3 h-3 rounded-full bg-neonPink"></span>
-                                    <span class="w-3 h-3 rounded-full bg-electricGold"></span>
-                                    <span class="w-3 h-3 rounded-full bg-emeraldNeon"></span>
-                                </div>
-                                <span class="bg-emerald-500/20 text-emerald-300 font-extrabold text-xs px-3 py-1 rounded-full border border-emerald-500/40">
-                                    <i class="fa-solid fa-check-double"></i> Verified Center
-                                </span>
-                            </div>
-
-                            <div class="space-y-4">
-                                <h3 class="font-heading text-2xl font-black text-white">
-                                    Admissions Standard Open
-                                </h3>
-                                
-                                <div class="space-y-3">
-                                    <div class="p-3.5 rounded-xl bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 flex items-center justify-between">
-                                        <div class="flex items-center gap-3">
-                                            <i class="fa-solid fa-school text-neonPink text-xl"></i>
-                                            <span class="font-bold text-slate-200">8th, 9th, 10th Standard</span>
-                                        </div>
-                                        <span class="text-xs font-extrabold text-neonPink bg-slate-950 px-2.5 py-1 rounded-lg">GSEB/CBSE</span>
-                                    </div>
-
-                                    <div class="p-3.5 rounded-xl bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 flex items-center justify-between">
-                                        <div class="flex items-center gap-3">
-                                            <i class="fa-solid fa-chart-line text-electricGold text-xl"></i>
-                                            <span class="font-bold text-slate-200">11th & 12th Comm/Sci</span>
-                                        </div>
-                                        <span class="text-xs font-extrabold text-electricGold bg-slate-950 px-2.5 py-1 rounded-lg">All Subjects</span>
-                                    </div>
-
-                                    <div class="p-3.5 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 flex items-center justify-between">
-                                        <div class="flex items-center gap-3">
-                                            <i class="fa-solid fa-user-graduate text-neonCyan text-xl"></i>
-                                            <span class="font-bold text-slate-200">College Degree (F.Y / S.Y / T.Y)</span>
-                                        </div>
-                                        <span class="text-xs font-extrabold text-neonCyan bg-slate-950 px-2.5 py-1 rounded-lg">B.Com/BBA/BCA</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <a href="#contact" class="block w-full text-center bg-gradient-to-r from-neonCyan to-neonPurple text-slate-950 font-black py-3.5 rounded-xl shadow-lg hover:brightness-110 transition-all uppercase tracking-wider text-sm">
-                                <i class="fa-solid fa-file-signature"></i> Claim Admission Discount
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <!-- About Section -->
+        <div id="about" style="text-align: center; margin: 30px 0;">
+            <h2 class="section-title">About Our Academy</h2>
+            <p style="font-size: 16px; line-height: 1.6;">
+                Dave Academy is dedicated to providing quality education with individual care for every student[cite: 1]. 
+                We offer expert coaching for school students (Classes 8th to 12th) as well as college students in Commerce stream[cite: 1].
+            </p>
         </div>
-    </section>
 
-    <!-- Key Highlights / Features Section -->
-    <section id="about" class="py-20 relative z-10 bg-slate-900/60 backdrop-blur-md border-y border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Quote Box -->
+        <div class="quote-box">
+            "ये दुनिया एक कर्मभूमि है, जहाँ काम सबको करना पड़ता है। वक्त हमें सिर्फ तस्वीर देता है, रंग हमें भरना पड़ता है।"[cite: 1]
+        </div>
+
+        <!-- Courses Section -->
+        <div id="courses">
+            <div style="text-align: center;">
+                <h2 class="section-title">Our Courses</h2>
+            </div>
             
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-neonCyan font-extrabold tracking-widest text-xs uppercase bg-neonCyan/10 px-4 py-1.5 rounded-full border border-neonCyan/30">
-                    Why Choose Dave Commerce Academy
-                </span>
-                <h2 class="font-heading text-3xl sm:text-5xl font-black text-white mt-4">
-                    Our 5 Pillars of <span class="text-rainbow">Academic Excellence</span>
-                </h2>
-                <p class="text-slate-400 mt-3 font-medium">Derived directly from our commitment to student success</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-                
-                <!-- Feature 1 -->
-                <div class="card-hover-pop p-6 rounded-3xl bg-gradient-to-b from-slate-800 to-slate-900 border border-neonPink/30 shadow-xl flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-2xl bg-neonPink/20 border border-neonPink text-neonPink flex items-center justify-center text-3xl mb-4 shadow-lg shadow-neonPink/20">
-                        <i class="fa-solid fa-book-reader"></i>
-                    </div>
-                    <h3 class="font-heading font-black text-xl text-white mb-2">EXPERT FACULTY</h3>
-                    <p class="text-xs text-slate-300 font-medium leading-relaxed">Experienced & Dedicated Teachers committed to student success.</p>
+            <div class="grid">
+                <!-- School Course Card -->
+                <div class="card">
+                    <h3>School Section (Class 8th to 12th)</h3>
+                    <p><b>Mediums:</b> English & Gujarati Medium[cite: 1]</p>
+                    <p><b>Boards:</b> G.S.E.B. & C.B.S.E.[cite: 1]</p>
+                    <p><b>Subjects Covered:</b></p>
+                    <ul>
+                        <li>Class 8, 9, 10: All Subjects (Science, Math, SS, Languages)[cite: 1]</li>
+                        <li>Class 11 & 12: Commerce, Science & Arts Streams</li>
+                    </ul>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="card-hover-pop p-6 rounded-3xl bg-gradient-to-b from-slate-800 to-slate-900 border border-vibrantOrange/30 shadow-xl flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-2xl bg-vibrantOrange/20 border border-vibrantOrange text-vibrantOrange flex items-center justify-center text-3xl mb-4 shadow-lg shadow-vibrantOrange/20">
-                        <i class="fa-solid fa-bullseye"></i>
-                    </div>
-                    <h3 class="font-heading font-black text-xl text-white mb-2">FOCUSED LEARNING</h3>
-                    <p class="text-xs text-slate-300 font-medium leading-relaxed">Concept Based Teaching to ensure deep subject understanding.</p>
+                <!-- College Course Card -->
+                <div class="card">
+                    <h3>College Section (Commerce Only)</h3>
+                    <p><b>Programs:</b> B.Com / BBA / M.Com</p>
+                    <p><b>Years:</b> 1st Year, 2nd Year & 3rd Year</p>
+                    <p><b>Subjects Covered:</b></p>
+                    <ul>
+                        <li>Financial Accounting & Costing</li>
+                        <li>Corporate & Business Statistics</li>
+                        <li>Economics, Auditing & Business Law</li>
+                        <li>Taxation & Management Accounting</li>
+                    </ul>
                 </div>
-
-                <!-- Feature 3 -->
-                <div class="card-hover-pop p-6 rounded-3xl bg-gradient-to-b from-slate-800 to-slate-900 border border-electricGold/30 shadow-xl flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-2xl bg-electricGold/20 border border-electricGold text-electricGold flex items-center justify-center text-3xl mb-4 shadow-lg shadow-electricGold/20">
-                        <i class="fa-solid fa-chart-column"></i>
-                    </div>
-                    <h3 class="font-heading font-black text-xl text-white mb-2">BETTER RESULTS</h3>
-                    <p class="text-xs text-slate-300 font-medium leading-relaxed">Proven Track Record of Excellence across GSEB, CBSE & University.</p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="card-hover-pop p-6 rounded-3xl bg-gradient-to-b from-slate-800 to-slate-900 border border-emeraldNeon/30 shadow-xl flex flex-col items-center text-center">
-                    <div class="w-16 h-16 rounded-2xl bg-emeraldNeon/20 border border-emeraldNeon text-emeraldNeon flex items-center justify-center text-3xl mb-4 shadow-lg shadow-emeraldNeon/20">
-                        <i class="fa-solid fa-list-check"></i>
-                    </div>
-                    <h3 class="font-heading font-black text-xl text-white mb-2">REGULAR TEST SERIES</h3>
-                    <p class="text-xs text-slate-300 font-medium leading-relaxed">Practice | Analyze | Improve through rigorous evaluation.</p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="card-hover-pop p-6 rounded-3xl bg-gradient-to-b from-slate-800 to-slate-900 border border-neonCyan/30 shadow-xl flex flex-col items-center text-center sm:col-span-2 lg:col-span-1">
-                    <div class="w-16 h-16 rounded-2xl bg-neonCyan/20 border border-neonCyan text-neonCyan flex items-center justify-center text-3xl mb-4 shadow-lg shadow-neonCyan/20">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-                    <h3 class="font-heading font-black text-xl text-white mb-2">PERSONAL ATTENTION</h3>
-                    <p class="text-xs text-slate-300 font-medium leading-relaxed">Individual Care and 1-on-1 guidance for Every Student.</p>
-                </div>
-
             </div>
         </div>
-    </section>
 
-    <!-- Lead Mentors Section (With both Base64 Images) -->
-    <section id="mentors" class="py-24 relative z-10 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Contact & Location Section -->
+        <div id="contact" style="margin-top: 40px;">
+            <div style="text-align: center;">
+                <h2 class="section-title">Visit Our Campus & Contact Us</h2>
+            </div>
+
+            <div class="contact-flex">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><b>Address:</b><br>
+                    FF, 104/105 Shree Avenue, opposite Swami Narayana Temple, Makrand Desai Road, Vadodara, Gujarat.[cite: 1]</p>
+                    
+                    <p><b>Call / WhatsApp Us:</b></p>
+                    <ul>
+                        <li><b>Vikas Dave Sir:</b> 9427784296 / 9780046100[cite: 1]</li>
+                        <li><b>Rahul Beldar Sir:</b> 7802980593[cite: 1]</li>
+                    </ul>
+
+                    <p><b>Tagline:</b> DREAM | BELIEVE | ACHIEVE[cite: 1]</p>
+                </div>
+
+                <div class="map-box">
+                    <!-- Google Map Embed -->
+                    <iframe src="https://maps.google.com/maps?q=FF,+104/105+shree+avenue,+opposite+swami+narayana+temple,+makrand+desai+Road,+vadodara,+Gujarat&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admission Inquiry Form -->
+        <div id="inquiry" style="margin-top: 40px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <div style="text-align: center;">
+                <h2 class="section-title">Admission Inquiry Form</h2>
+            </div>
             
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-neonPink font-extrabold tracking-widest text-xs uppercase bg-neonPink/10 px-4 py-1.5 rounded-full border border-neonPink/30">
-                    Experienced Leadership
-                </span>
-                <h2 class="font-heading text-3xl sm:text-5xl font-black text-white mt-4">
-                    Meet Our <span class="text-rainbow">Expert Mentors</span>
-                </h2>
-                <p class="text-slate-300 mt-3 font-medium text-lg">
-                    Guided directly by visionary educators dedicated to your bright academic future
-                </p>
-            </div>
+            <form action="#" method="get" onsubmit="alert('Thank you! Your inquiry has been submitted.'); return false;">
+                <label for="name">Student Full Name:</label>
+                <input type="text" id="name" required placeholder="Enter student name">
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                
-                <!-- Mentor 1: Vikas Dave Sir -->
-                <div class="rainbow-border rounded-3xl p-6 sm:p-8 card-hover-pop relative overflow-hidden flex flex-col md:flex-row gap-6 items-center">
-                    <div class="w-full md:w-56 h-64 shrink-0 rounded-2xl overflow-hidden border-2 border-neonPink/50 shadow-2xl relative group">
-                        <!-- Vikas Dave Sir Image -->
-                        <img id="vikasDavePhoto" src="vikas.jpg" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 to-transparent p-2 text-center">
-                            <span class="text-[10px] font-black text-amber-300 uppercase tracking-wider">FOUNDER & DIRECTOR</span>
-                        </div>
-                    </div>
+                <label for="phone">Mobile Number:</label>
+                <input type="tel" id="phone" required placeholder="Enter phone number">
 
-                    <div class="flex-1 space-y-4 text-center md:text-left">
-                        <div>
-                            <span class="bg-neonPink/20 text-neonPink text-xs font-black px-3 py-1 rounded-full border border-neonPink/30 uppercase">Senior Commerce Faculty</span>
-                            <h3 class="font-heading font-black text-3xl text-white mt-2">VIKAS DAVE SIR</h3>
-                            <p class="text-electricGold font-bold text-sm">Founder & Commerce Specialist</p>
-                        </div>
+                <label for="course">Select Course/Class:</label>
+                <select id="course">
+                    <option>Class 8th (English/Gujarati Medium)[cite: 1]</option>
+                    <option>Class 9th (English/Gujarati Medium)[cite: 1]</option>
+                    <option>Class 10th (English/Gujarati Medium)[cite: 1]</option>
+                    <option>Class 11th / 12th Commerce</option>
+                    <option>College 1st Year (Commerce)</option>
+                    <option>College 2nd Year (Commerce)</option>
+                    <option>College 3rd Year (Commerce)</option>
+                </select>
 
-                        <p class="text-xs text-slate-300 leading-relaxed font-medium">
-                            20+ Years of dedicated teaching excellence in Commerce, Accounts, Economics and Higher Level Financial Concepts.
-                        </p>
+                <label for="msg">Message / Any Specific Requirements:</label>
+                <textarea id="msg" rows="4" placeholder="Write your query here..."></textarea>
 
-                        <!-- Contact Badges -->
-                        <div class="pt-2 border-t border-white/10 space-y-2">
-                            <div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
-                                <a href="tel:9427784296" class="bg-blue-600/30 hover:bg-blue-600 text-white border border-blue-400 px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5">
-                                    <i class="fa-solid fa-phone text-neonCyan"></i> 94277 84296
-                                </a>
-                                <a href="tel:9780046100" class="bg-blue-600/30 hover:bg-blue-600 text-white border border-blue-400 px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5">
-                                    <i class="fa-solid fa-phone text-neonCyan"></i> 97800 46100
-                                </a>
-                            </div>
-
-                            <a href="https://wa.me/919427784296?text=Hello%20Vikas%20Dave%20Sir,%20I%20want%20to%20inquire%20about%20admissions." target="_blank" class="w-full bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 font-black py-2.5 rounded-xl text-xs tracking-wider uppercase flex items-center justify-center gap-2 hover:opacity-90 transition">
-                                <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Vikas Dave Sir
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mentor 2: Rahul Beldar Sir -->
-                <div class="rainbow-border rounded-3xl p-6 sm:p-8 card-hover-pop relative overflow-hidden flex flex-col md:flex-row gap-6 items-center">
-                    <div class="w-full md:w-56 h-64 shrink-0 rounded-2xl overflow-hidden border-2 border-neonCyan/50 shadow-2xl relative group">
-                        <!-- Rahul Beldar Sir Image -->
-                        <img id="rahulBeldarPhoto" src="rahaul.jpg">
-                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 to-transparent p-2 text-center">
-                            <span class="text-[10px] font-black text-neonCyan uppercase tracking-wider">HEAD FACULTY</span>
-                       
-                        </div>
-                    </div>
-
-                    <div class="flex-1 space-y-4 text-center md:text-left">
-                        <div>
-                            <span class="bg-neonCyan/20 text-neonCyan text-xs font-black px-3 py-1 rounded-full border border-neonCyan/30 uppercase">Mathematics & Science Expert</span>
-                            <h3 class="font-heading font-black text-3xl text-white mt-2">RAHUL BELDAR SIR</h3>
-                            <p class="text-electricGold font-bold text-sm">Head Faculty & Mentor</p>
-                        </div>
-
-                        <p class="text-xs text-slate-300 leading-relaxed font-medium">
-                            Passionate educator specializing in Mathematics, Logic, Test Analysis, and Problem Solving for School & Board exams.
-                        </p>
-
-                        <!-- Contact Badges -->
-                        <div class="pt-2 border-t border-white/10 space-y-2">
-                            <div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
-                                <a href="tel:7802980593" class="bg-purple-600/30 hover:bg-purple-600 text-white border border-purple-400 px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5">
-                                    <i class="fa-solid fa-phone text-neonPink"></i> 78029 80593
-                                </a>
-                            </div>
-
-                            <a href="https://wa.me/917802980593?text=Hello%20Rahul%20Beldar%20Sir,%20I%20want%20to%20inquire%20about%20admissions." target="_blank" class="w-full bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 font-black py-2.5 rounded-xl text-xs tracking-wider uppercase flex items-center justify-center gap-2 hover:opacity-90 transition">
-                                <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Rahul Beldar Sir
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+                <input type="submit" value="Submit Inquiry">
+            </form>
         </div>
-    </section>
 
-    <!-- Motivational Quote Section -->
-    <section class="py-16 relative z-10 bg-gradient-to-r from-neonPink/20 via-neonPurple/30 to-neonCyan/20 border-y border-white/20 backdrop-blur-xl">
-        <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
-            <i class="fa-solid fa-quote-left text-5xl text-electricGold animate-pulse"></i>
-            <blockquote class="font-heading font-black text-2xl sm:text-4xl text-white leading-snug tracking-wide">
-                "ये दुनिया एक कर्मभूमि है, जहाँ काम सबको करना पड़ता है।<br>
-                वक्त हमें सिर्फ तस्वीर देता है, <span class="text-rainbow">रंग हमें भरना पड़ता है।</span>"
-            </blockquote>
-            <p class="text-electricGold font-extrabold tracking-widest text-sm uppercase">— DAVE COMMERCE ACADEMY MOTTO</p>
-        </div>
-    </section>
-
-    <!-- Interactive Course Offerings Section -->
-    <section id="courses" class="py-24 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-emeraldNeon font-extrabold tracking-widest text-xs uppercase bg-emeraldNeon/10 px-4 py-1.5 rounded-full border border-emeraldNeon/30">
-                    Comprehensive Programs
-                </span>
-                <h2 class="font-heading text-3xl sm:text-5xl font-black text-white mt-4">
-                    Explore Our <span class="text-rainbow">Academic Courses</span>
-                </h2>
-                <p class="text-slate-300 mt-2 font-medium">Select category below to filter available courses</p>
-            </div>
-
-            <!-- Course Filter Buttons -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button onclick="filterCourses('all')" class="course-tab-btn active bg-neonPink text-white font-extrabold px-6 py-2.5 rounded-full text-sm shadow-lg transition">
-                    All Offerings
-                </button>
-                <button onclick="filterCourses('school')" class="course-tab-btn glass-colorful text-slate-300 hover:text-white font-bold px-6 py-2.5 rounded-full text-sm transition">
-                    Class 8th - 10th
-                </button>
-                <button onclick="filterCourses('higher')" class="course-tab-btn glass-colorful text-slate-300 hover:text-white font-bold px-6 py-2.5 rounded-full text-sm transition">
-                    Class 11th - 12th (Comm/Sci)
-                </button>
-                <button onclick="filterCourses('college')" class="course-tab-btn glass-colorful text-slate-300 hover:text-white font-bold px-6 py-2.5 rounded-full text-sm transition">
-                    College Degree (1st, 2nd, 3rd Yr)
-                </button>
-            </div>
-
-            <!-- Course Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="courseGrid">
-                
-                <!-- Course Item 1 -->
-                <div class="course-card school p-8 rounded-3xl bg-slate-900/90 border border-neonPink/30 shadow-2xl hover:border-neonPink transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="w-14 h-14 rounded-2xl bg-neonPink/20 text-neonPink border border-neonPink flex items-center justify-center text-2xl">
-                                <i class="fa-solid fa-graduation-cap"></i>
-                            </div>
-                            <span class="text-[10px] font-black uppercase tracking-wider bg-neonPink/20 text-neonPink px-3 py-1 rounded-full">Foundation</span>
-                        </div>
-                        <h3 class="font-heading font-black text-2xl text-white mb-2">Class 8th, 9th & 10th</h3>
-                        <p class="text-xs text-slate-300 leading-relaxed mb-6 font-medium">
-                            Building strong core fundamentals in Mathematics, Science, Social Studies & English for GSEB and CBSE boards.
-                        </p>
-                        <ul class="space-y-2 text-xs font-bold text-slate-300 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emeraldNeon"></i> GSEB & CBSE Covered</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emeraldNeon"></i> English & Gujarati Medium</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emeraldNeon"></i> Weekly Assessment Tests</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="w-full text-center bg-neonPink/20 hover:bg-neonPink text-neonPink hover:text-white border border-neonPink font-bold py-2.5 rounded-xl text-xs transition">
-                        Enquire for Class 8-10
-                    </a>
-                </div>
-
-                <!-- Course Item 2 -->
-                <div class="course-card higher p-8 rounded-3xl bg-slate-900/90 border border-electricGold/30 shadow-2xl hover:border-electricGold transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="w-14 h-14 rounded-2xl bg-electricGold/20 text-electricGold border border-electricGold flex items-center justify-center text-2xl">
-                                <i class="fa-solid fa-chart-line"></i>
-                            </div>
-                            <span class="text-[10px] font-black uppercase tracking-wider bg-electricGold/20 text-electricGold px-3 py-1 rounded-full">Board Exam Prep</span>
-                        </div>
-                        <h3 class="font-heading font-black text-2xl text-white mb-2">Class 11th & 12th Commerce</h3>
-                        <p class="text-xs text-slate-300 leading-relaxed mb-6 font-medium">
-                            Comprehensive coaching for Accounts, Statistics, Economics, Business Administration (BA), and English.
-                        </p>
-                        <ul class="space-y-2 text-xs font-bold text-slate-300 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-electricGold"></i> Board Examination Focus</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-electricGold"></i> Numerical Problem Solving</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-electricGold"></i> Past 10-Yr Paper Solution</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="w-full text-center bg-electricGold/20 hover:bg-electricGold text-electricGold hover:text-slate-950 border border-electricGold font-bold py-2.5 rounded-xl text-xs transition">
-                        Enquire Commerce
-                    </a>
-                </div>
-
-                <!-- Course Item 3 -->
-                <div class="course-card college p-8 rounded-3xl bg-slate-900/90 border border-neonCyan/30 shadow-2xl hover:border-neonCyan transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="w-14 h-14 rounded-2xl bg-neonCyan/20 text-neonCyan border border-neonCyan flex items-center justify-center text-2xl">
-                                <i class="fa-solid fa-university"></i>
-                            </div>
-                            <span class="text-[10px] font-black uppercase tracking-wider bg-neonCyan/20 text-neonCyan px-3 py-1 rounded-full">College Degrees</span>
-                        </div>
-                        <h3 class="font-heading font-black text-2xl text-white mb-2">B.Com, BBA, BCA, M.Com</h3>
-                        <p class="text-xs text-slate-300 leading-relaxed mb-6 font-medium">
-                            Specialized coaching for <strong>1st Year (F.Y.), 2nd Year (S.Y.), and 3rd Year (T.Y.)</strong> undergraduate and M.Com students.
-                        </p>
-                        <ul class="space-y-2 text-xs font-bold text-slate-300 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-neonCyan"></i> Semester-wise Syllabus</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-neonCyan"></i> Corporate Financial Accounting</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-neonCyan"></i> Statistics & Costing</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="w-full text-center bg-neonCyan/20 hover:bg-neonCyan text-neonCyan hover:text-slate-950 border border-neonCyan font-bold py-2.5 rounded-xl text-xs transition">
-                        Enquire College Degree
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Fee Calculator Section -->
-    <section id="calculator" class="py-20 relative z-10 bg-slate-900/80 border-y border-white/10 backdrop-blur-xl">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10">
-                <span class="text-vibrantOrange font-extrabold tracking-widest text-xs uppercase bg-vibrantOrange/10 px-4 py-1.5 rounded-full border border-vibrantOrange/30">
-                    Transparent Structure
-                </span>
-                <h2 class="font-heading text-3xl sm:text-4xl font-black text-white mt-3">
-                    Instant <span class="text-rainbow">Fee Estimator & Discount Calculator</span>
-                </h2>
-                <p class="text-slate-400 text-sm mt-1">Estimate your course fee and unlock early registration discounts!</p>
-            </div>
-
-            <div class="rainbow-border rounded-3xl p-6 sm:p-8 bg-slate-950 space-y-6">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs font-extrabold uppercase text-slate-300 mb-2">Select Course / Grade</label>
-                        <select id="calcGrade" onchange="calculateFee()" class="w-full bg-slate-900 border border-white/20 rounded-xl px-4 py-3 text-white font-bold text-sm focus:border-neonPink focus:outline-none">
-                            <option value="8">Class 8th Standard</option>
-                            <option value="9">Class 9th Standard</option>
-                            <option value="10">Class 10th Standard (Board)</option>
-                            <option value="11">Class 11th Commerce / Science</option>
-                            <option value="12">Class 12th Commerce / Science (Board)</option>
-                            <option value="college1">College 1st Year (F.Y. B.Com/BBA/BCA)</option>
-                            <option value="college2">College 2nd Year (S.Y. B.Com/BBA/BCA)</option>
-                            <option value="college3">College 3rd Year (T.Y. B.Com/BBA/BCA/M.Com)</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-extrabold uppercase text-slate-300 mb-2">Payment Plan</label>
-                        <select id="calcPlan" onchange="calculateFee()" class="w-full bg-slate-900 border border-white/20 rounded-xl px-4 py-3 text-white font-bold text-sm focus:border-neonCyan focus:outline-none">
-                            <option value="annual">One-Time Annual Payment (15% OFF)</option>
-                            <option value="installment">2-Installment Plan (5% OFF)</option>
-                            <option value="monthly">Monthly Standard Plan</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Calculated Output Box -->
-                <div class="p-6 rounded-2xl bg-gradient-to-r from-neonPink/20 via-neonPurple/20 to-neonCyan/20 border border-white/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-                    <div>
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Estimated Fee Quote</span>
-                        <div id="calculatedPrice" class="font-heading font-black text-3xl sm:text-4xl text-rainbow mt-1">₹ 14,450 / Year</div>
-                        <span id="savingsTag" class="text-xs font-extrabold text-emeraldNeon mt-1 block"><i class="fa-solid fa-gift"></i> You save ₹ 2,550 with Annual Payment!</span>
-                    </div>
-
-                    <a href="#contact" class="shrink-0 bg-gradient-to-r from-electricGold to-vibrantOrange text-slate-950 font-black px-6 py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg hover:scale-105 transition">
-                        Lock This Quote <i class="fa-solid fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Admission Inquiry & Contact Section -->
-    <section id="contact" class="py-24 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                
-                <!-- Left Information Column -->
-                <div class="lg:col-span-5 space-y-8">
-                    <div>
-                        <span class="text-neonPink font-extrabold tracking-widest text-xs uppercase bg-neonPink/10 px-4 py-1.5 rounded-full border border-neonPink/30">
-                            Visit Our Academy
-                        </span>
-                        <h2 class="font-heading text-3xl sm:text-5xl font-black text-white mt-4">
-                            Contact & <span class="text-rainbow">Location</span>
-                        </h2>
-                        <p class="text-slate-300 mt-2 font-medium">
-                            Visit our fully equipped coaching center or connect directly with our mentors.
-                        </p>
-                    </div>
-
-                    <!-- Address Box -->
-                    <div class="p-6 rounded-3xl bg-slate-900 border border-white/10 space-y-3 shadow-xl">
-                        <div class="flex items-center gap-3 text-electricGold font-bold text-lg">
-                            <div class="w-10 h-10 rounded-xl bg-electricGold/20 flex items-center justify-center text-electricGold">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <span>Academy Address</span>
-                        </div>
-                        <p class="text-sm text-slate-200 font-medium leading-relaxed pl-13">
-                            <strong>FF, 104/105 Shree Avenue</strong>,<br>
-                            Opp. Swami Narayana Temple,<br>
-                            Makrand Desai Road, Vadodara, Gujarat.
-                        </p>
-                        <a href="https://maps.google.com/?q=Shree+Avenue+Makrand+Desai+Road+Vadodara" target="_blank" class="inline-flex items-center gap-2 text-xs font-extrabold text-neonCyan hover:underline pt-2">
-                            <i class="fa-solid fa-map-location-dot"></i> Open Directions in Google Maps
-                        </a>
-                    </div>
-
-                    <!-- Call Box -->
-                    <div class="p-6 rounded-3xl bg-slate-900 border border-white/10 space-y-3 shadow-xl">
-                        <div class="flex items-center gap-3 text-emeraldNeon font-bold text-lg">
-                            <div class="w-10 h-10 rounded-xl bg-emeraldNeon/20 flex items-center justify-center text-emeraldNeon">
-                                <i class="fa-solid fa-headset"></i>
-                            </div>
-                            <span>Call / WhatsApp Helpline</span>
-                        </div>
-                        <div class="space-y-2 text-sm text-slate-200 pl-13">
-                            <p><strong>Vikas Dave Sir:</strong> <a href="tel:9427784296" class="text-neonCyan font-bold">94277 84296</a> / <a href="tel:9780046100" class="text-neonCyan font-bold">97800 46100</a></p>
-                            <p><strong>Rahul Beldar Sir:</strong> <a href="tel:7802980593" class="text-neonCyan font-bold">78029 80593</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Form Column -->
-                <div class="lg:col-span-7">
-                    <div class="rainbow-border rounded-3xl p-8 sm:p-10 bg-slate-950 relative shadow-2xl">
-                        <div class="mb-8">
-                            <h3 class="font-heading font-black text-3xl text-white">Send Admission Inquiry</h3>
-                            <p class="text-slate-400 text-sm mt-1">Fill in the details below for a call back from Dave Sir!</p>
-                        </div>
-
-                        <form id="admissionForm" onsubmit="submitInquiry(event)" class="space-y-5">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <div>
-                                    <label class="block text-xs font-extrabold uppercase text-slate-300 mb-1">Student Full Name</label>
-                                    <input type="text" required placeholder="e.g. Chirag Patel" class="w-full bg-slate-900 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:border-neonPink focus:outline-none">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-extrabold uppercase text-slate-300 mb-1">Contact Mobile Number</label>
-                                    <input type="tel" required pattern="[0-9]{10}" placeholder="10-digit mobile number" class="w-full bg-slate-900 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:border-neonCyan focus:outline-none">
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <div>
-                                    <label class="block text-xs font-extrabold uppercase text-slate-300 mb-1">Select Grade / Class</label>
-                                    <select required class="w-full bg-slate-900 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:border-electricGold focus:outline-none">
-                                        <option value="">-- Choose Standard --</option>
-                                        <option value="8th">Class 8th</option>
-                                        <option value="9th">Class 9th</option>
-                                        <option value="10th">Class 10th</option>
-                                        <option value="11th Commerce">Class 11th Commerce</option>
-                                        <option value="12th Commerce">Class 12th Commerce</option>
-                                        <option value="College 1st Year">College 1st Year (F.Y.)</option>
-                                        <option value="College 2nd Year">College 2nd Year (S.Y.)</option>
-                                        <option value="College 3rd Year">College 3rd Year (T.Y.)</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-extrabold uppercase text-slate-300 mb-1">Board / Medium</label>
-                                    <select required class="w-full bg-slate-900 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:border-emeraldNeon focus:outline-none">
-                                        <option value="">-- Choose Medium --</option>
-                                        <option value="English GSEB">English Medium (GSEB)</option>
-                                        <option value="Gujarati GSEB">Gujarati Medium (GSEB)</option>
-                                        <option value="CBSE">CBSE Board</option>
-                                        <option value="College Degree">College / University</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-extrabold uppercase text-slate-300 mb-1">Special Requirement / Subject Inquiry</label>
-                                <textarea rows="3" placeholder="Mention any specific subject questions..." class="w-full bg-slate-900 border border-white/20 rounded-xl px-4 py-3 text-white text-sm focus:border-neonPurple focus:outline-none resize-none"></textarea>
-                            </div>
-
-                            <button type="submit" class="shimmer-button w-full bg-gradient-to-r from-neonPink via-vibrantOrange to-electricGold text-slate-950 font-black py-4 rounded-xl text-base uppercase tracking-wider shadow-xl shadow-neonPink/30 hover:scale-[1.01] active:scale-95 transition">
-                                <i class="fa-solid fa-paper-plane mr-2"></i> Submit Inquiry Now
-                            </button>
-                        </form>
-
-                        <!-- Form Success Banner -->
-                        <div id="formSuccessAlert" class="hidden mt-6 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500 text-emerald-300 text-center text-sm font-bold animate-bounce">
-                            <i class="fa-solid fa-circle-check text-xl mb-1 block"></i>
-                            Awesome! Your inquiry has been submitted. Our team will call you within 2 hours!
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-white/10 py-12 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <div class="flex items-center justify-center gap-3">
-                <span class="font-heading font-black text-2xl text-white">DAVE COMMERCE <span class="text-rainbow">ACADEMY</span></span>
-            </div>
-            <p class="text-slate-400 text-xs max-w-xl mx-auto">
-                FF, 104/105 Shree Avenue, Opp. Swami Narayana Temple, Makrand Desai Road, Vadodara, Gujarat.
-            </p>
-            <div class="flex flex-wrap justify-center gap-6 text-xs font-bold text-slate-300">
-                <a href="tel:9427784296" class="hover:text-neonPink"><i class="fa-solid fa-phone mr-1"></i> Vikas Dave Sir: 94277 84296</a>
-                <a href="tel:7802980593" class="hover:text-neonCyan"><i class="fa-solid fa-phone mr-1"></i> Rahul Beldar Sir: 78029 80593</a>
-            </div>
-            <div class="pt-6 border-t border-white/10 text-slate-500 text-[11px]">
-                &copy; 2026 Dave Commerce Academy Vadodara. All Rights Reserved.
-            </div>
-        </div>
+    <footer>
+        <p>&copy; Dave Commerce Academy - Vadodara. All Rights Reserved.[cite: 1]</p>
     </footer>
 
-    <!-- Interactive JS Script Logic -->
-    <script>
-        // Mobile Navigation Toggle
-        const mobileNavToggle = document.getElementById('mobileNavToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        mobileNavToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Course Tab Filter
-        function filterCourses(category) {
-            const cards = document.querySelectorAll('.course-card');
-            const btns = document.querySelectorAll('.course-tab-btn');
-
-            btns.forEach(btn => btn.classList.remove('active', 'bg-neonPink', 'text-white'));
-
-            event.target.classList.add('active', 'bg-neonPink', 'text-white');
-
-            cards.forEach(card => {
-                if (category === 'all' || card.classList.contains(category)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // Dynamic Fee Calculator Logic
-        function calculateFee() {
-            const grade = document.getElementById('calcGrade').value;
-            const plan = document.getElementById('calcPlan').value;
-            const priceDisplay = document.getElementById('calculatedPrice');
-            const savingsTag = document.getElementById('savingsTag');
-
-            let baseFee = 16000;
-
-            if (grade === '8' || grade === '9') baseFee = 14000;
-            else if (grade === '10') baseFee = 17000;
-            else if (grade === '11') baseFee = 20000;
-            else if (grade === '12') baseFee = 24000;
-            else if (grade.includes('college')) baseFee = 22000;
-
-            let finalFee = baseFee;
-            let savings = 0;
-
-            if (plan === 'annual') {
-                savings = Math.round(baseFee * 0.15);
-                finalFee = baseFee - savings;
-                savingsTag.innerHTML = `<i class="fa-solid fa-gift"></i> You save ₹ ${savings.toLocaleString()} with One-Time Annual Plan!`;
-            } else if (plan === 'installment') {
-                savings = Math.round(baseFee * 0.05);
-                finalFee = baseFee - savings;
-                savingsTag.innerHTML = `<i class="fa-solid fa-tag"></i> You save ₹ ${savings.toLocaleString()} with 2-Installment Plan!`;
-            } else {
-                savingsTag.innerHTML = `<i class="fa-solid fa-info-circle"></i> Standard Monthly Installment Rate applied.`;
-            }
-
-            priceDisplay.innerText = `₹ ${finalFee.toLocaleString()} / Year`;
-        }
-
-        // Inquiry Form Submission with Confetti effect
-        function submitInquiry(e) {
-            e.preventDefault();
-            const alertBox = document.getElementById('formSuccessAlert');
-            alertBox.classList.remove('hidden');
-
-            if (typeof confetti === 'function') {
-                confetti({
-                    particleCount: 100,
-                    spread: 70,
-                    origin: { y: 0.6 }
-                });
-            }
-
-            setTimeout(() => {
-                alertBox.classList.add('hidden');
-                e.target.reset();
-            }, 6000);
-        }
-    </script>
 </body>
 </html>
